@@ -28,7 +28,7 @@ public class PredictionService {
 
         try{
             ObjectDtoBuilder objectDTOBuilder = new ObjectDtoBuilder();
-            Patient patient = patientRepository.findPatientByMyId(predictionDto.getPatientId());
+            Patient patient = patientRepository.findPatientByMyId(predictionDto.getPatient_unique_code());
             Prediction prediction= objectDTOBuilder.predictionDtoToEntity(predictionDto, patient);
             predictionRepository.save(prediction);
 

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/prediction-history")
+@RequestMapping("/diabetes-prediction/prediction-history")
 @CrossOrigin(origins = "http://localhost:3000")
 public class ViewHistoryPredictionController {
     @Autowired

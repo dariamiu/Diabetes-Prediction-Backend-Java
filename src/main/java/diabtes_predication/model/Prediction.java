@@ -34,6 +34,10 @@ public class Prediction {
     private float bmi;
 
     @Column
+    private float HbA1c_level;
+
+
+    @Column
     private float blood_glucose_level;
 
     @Column
@@ -114,5 +118,13 @@ public class Prediction {
 
     public void setPatient(Patient patient) {
         this.patient = patient;
+    }
+
+    public float getHbA1c_level() {
+        return HbA1c_level;
+    }
+
+    public void setHbA1c_level(float hbA1c_level) {
+        HbA1c_level = hbA1c_level;
     }
 }

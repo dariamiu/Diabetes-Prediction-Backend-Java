@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 
 @RestController
+@RequestMapping("/diabetes-prediction/predict")
 @CrossOrigin(origins = "http://localhost:3000")
 public class PredictController {
     @Autowired
     PredictionService predictionService;
 
-    @PostMapping("/predict")
+    @PostMapping("/make-prediction")
     HashMap<String,Object> predict(@RequestBody PredictionDto predictionDto) {
         return predictionService.predict(predictionDto);
     }

@@ -25,6 +25,9 @@ public class Patient {
     @Column
     private String gender;
 
+    @Column
+    private String patient_unique_code;
+
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Prediction> predictions;
 
@@ -55,5 +58,13 @@ public class Patient {
 
     public void setPredictions(List<Prediction> predictions) {
         this.predictions = predictions;
+    }
+
+    public String getPatient_unique_code() {
+        return patient_unique_code;
+    }
+
+    public void setPatient_unique_code(String patient_unique_code) {
+        this.patient_unique_code = patient_unique_code;
     }
 }

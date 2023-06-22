@@ -16,6 +16,7 @@ public class ObjectDtoBuilder {
                     ((Prediction) object).isHypertension(),
                     ((Prediction) object).getSmoking_history(),
                     ((Prediction) object).getBmi(),
+                    ((Prediction) object).getHbA1c_level(),
                     ((Prediction) object).getBlood_glucose_level());
         }
         return null;
